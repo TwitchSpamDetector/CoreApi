@@ -1,0 +1,26 @@
+package com.twitchspamdetector.coreapi.response;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.time.Instant;
+import java.util.List;
+import java.util.UUID;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class VerdictRecordResponse {
+
+    private UUID messageId;
+    private String userId;
+    private Double spamScore;
+    private List<String> reasons;
+    private ModerationAction action;
+    private Instant createdAt;
+}
